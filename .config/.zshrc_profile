@@ -2,7 +2,7 @@
 alias ll="ls -lah"
 
 # Navigation Shortcuts
-alias per="cd ~/personal"
+alias personal="cd ~/personal"
 alias work="cd ~/work"
 alias dotfiles="cd ~/dotfiles"
 
