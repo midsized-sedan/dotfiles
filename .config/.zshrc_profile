@@ -1,12 +1,24 @@
 # Command Shortcuts
 alias ll="ls -lah"
+alias vim="nvim"
 
 # Navigation Shortcuts
 alias personal="cd ~/personal"
 alias work="cd ~/work"
 alias dotfiles="cd ~/dotfiles"
 
+# Add .NET Core SDK tools
+export PATH="$PATH:/home/ubuntu/.dotnet/tools"
 
+export PATH="$PATH:/usr/local/go/bin"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Open files in browser
+export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+alias start="chrome.exe"
+
+
+# GPG is stupid and can't remember where to read input from
+export GPG_TTY=$(tty)

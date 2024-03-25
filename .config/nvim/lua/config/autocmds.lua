@@ -1,10 +1,22 @@
 local augroup = vim.api.nvim_create_augroup
-local PancakeGroup = augroup("PancakeGroup", {})
+local ChaunceyGroup = augroup("ChaunceyGroup", {})
 
 local autocmd = vim.api.nvim_create_autocmd
 
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+autocmd('TextYankPost', {
+    desc = 'Highligh when yanking text',
+    group = ChaunceyGroup,
+    callback = function()
+        vim.highlight.on_yank()
+    end
+})
+
+
 autocmd('LspAttach', {
-    group = PancakeGroup,
+    group = ChaunceyGroup,
     callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
