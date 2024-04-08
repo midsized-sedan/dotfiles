@@ -19,6 +19,13 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 alias start="chrome.exe"
 
+# PNPM Home
+export PNPM_HOME="/home/ubuntu/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 
 # GPG is stupid and can't remember where to read input from
 export GPG_TTY=$(tty)
