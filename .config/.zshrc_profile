@@ -1,6 +1,5 @@
 # Command Shortcuts
 alias ll="ls -lah"
-alias vim="nvim"
 
 # Navigation Shortcuts
 alias personal="cd ~/personal"
@@ -29,3 +28,5 @@ esac
 
 # GPG is stupid and can't remember where to read input from
 export GPG_TTY=$(tty)
+
+export PATH="/usr/share/code/bin:$PATH"
