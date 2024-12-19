@@ -1,5 +1,5 @@
 -- Pull in the wezterm API
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -8,7 +8,9 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 -- config.color_scheme = 'AdventureTime'
-config.font = wezterm.font 'Meslo LGM Nerd Font'
+config.font = wezterm.font("Meslo LGM Nerd Font")
+
+config.window_background_opacity = 1
 
 -- and finally, return the configuration to wezterm
 return config
