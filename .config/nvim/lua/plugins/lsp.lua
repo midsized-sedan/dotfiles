@@ -27,7 +27,7 @@ return {
 		require("mason").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
-				-- "emmet_ls",
+				"emmet_ls",
 				"lua_ls",
 				-- "rust_analyzer",
 				-- "tsserver",
@@ -54,6 +54,20 @@ return {
 						},
 					})
 				end,
+                ["emmet_ls"] = function()
+					local lspconfig = require("lspconfig")
+                    lspconfig.emmet_ls.setup({
+						capabilities = capabilities,
+                        filetypes = { "html", "css", },
+                        init_options = {
+                            html = {
+                                options = {
+                                    ["bem.enabled"] = true,
+                                }
+                            }
+                        }
+                    })
+                end,
 			},
 		})
 
