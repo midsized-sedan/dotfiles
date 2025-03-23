@@ -6,8 +6,8 @@
 
 set $mod Mod1
 # moniter vars for arch01 machine
-set $fm DP-1
-set $sm HDMI-1
+set $fm DP-4
+set $sm HDMI-0
 
 # =====================================
 # DEFAULT i3 SETTINGS AND EXECUTES
@@ -72,7 +72,7 @@ exec --no-startup-id xrandr --output $fm --primary --output $sm --left-of $fm
 exec --no-startup-id picom
 
 # background picture
-exec --no-startup-id feh --no-fehbg --bg-fill '/home/chauncey/Pictures/wallpapers/yshtola-sleep-library.jpg'
+exec --no-startup-id feh --no-fehbg --bg-fill '/home/shawn/Pictures/wallpapers/archgirl.jpg'
 
 # turn off screen saver features
 exec --no-startup-id xset s off

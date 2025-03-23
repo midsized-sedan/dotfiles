@@ -54,20 +54,20 @@ return {
 						},
 					})
 				end,
-                ["emmet_ls"] = function()
+				["emmet_ls"] = function()
 					local lspconfig = require("lspconfig")
-                    lspconfig.emmet_ls.setup({
+					lspconfig.emmet_ls.setup({
 						capabilities = capabilities,
-                        filetypes = { "html", "css", },
-                        init_options = {
-                            html = {
-                                options = {
-                                    ["bem.enabled"] = true,
-                                }
-                            }
-                        }
-                    })
-                end,
+						filetypes = { "html", "css", "php"},
+						init_options = {
+							html = {
+								options = {
+									["bem.enabled"] = true,
+								}
+							}
+						}
+					})
+				end,
 			},
 		})
 

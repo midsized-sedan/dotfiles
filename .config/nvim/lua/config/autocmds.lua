@@ -14,6 +14,16 @@ autocmd('TextYankPost', {
     end
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "php",
+	callback = function()
+		vim.cmd("setlocal autoindent")
+		vim.cmd("setlocal smartindent")
+		vim.cmd("setlocal nocindent")
+		vim.cmd("setlocal indentexpr=\"\"")
+	end,
+})
+
 
 autocmd('LspAttach', {
     group = ChaunceyGroup,
