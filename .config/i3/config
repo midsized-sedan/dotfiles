@@ -4,7 +4,7 @@
 # VARIABLES
 # =====================================
 
-set $mod Mod1
+set $mod Mod4
 # moniter vars for arch01 machine
 set $fm DP-4
 set $sm HDMI-0
@@ -15,11 +15,11 @@ set $sm HDMI-0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-# font pango:monospace 8
+font pango:Fira Code Mono Nerd Font 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:Fira Code Mono Nerd Font8
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -44,7 +44,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
-floating_modifier Mod1
+floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
@@ -63,7 +63,7 @@ bar {
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Meslo LGM Nerd Font 12
+font pango:Fira Code Mono Nerd Font 12
 
 # Use Xrandr to position monitors
 exec --no-startup-id xrandr --output $fm --primary --output $sm --left-of $fm
@@ -72,12 +72,13 @@ exec --no-startup-id xrandr --output $fm --primary --output $sm --left-of $fm
 exec --no-startup-id picom
 
 # background picture
-exec --no-startup-id feh --no-fehbg --bg-fill '/home/shawn/Pictures/wallpapers/archgirl.jpg'
+exec --no-startup-id feh --no-fehbg --bg-fill '/home/shawn/Pictures/wallpapers/hatsune-sky.jpg'
 
 # turn off screen saver features
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
 
+# polybar
 # kill any hanging polybar processes
 # exec_always killall polybar
 # exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
