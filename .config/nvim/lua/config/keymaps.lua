@@ -36,9 +36,9 @@ vim.keymap.set("n", "Q", "<nop>")
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- formatting hotkey setup in corresponding plugin files, either lsp or formatter
--- vim.keymap.set("n", "<leader>f", function()
---     vim.lsp.buf.format()
--- end)
+vim.keymap.set("n", "<leader>f", function()
+	vim.lsp.buf.format()
+end)
 
 -- Quick fix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
